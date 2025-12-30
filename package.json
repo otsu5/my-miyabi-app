@@ -5,8 +5,8 @@
   "scripts": {
     "mcp:check": "node .claude/mcp-servers/check-health.js",
     "mcp:list": "node -e \"console.log(JSON.stringify(require('./.claude/mcp.json'), null, 2))\"",
-    "a2a:check": "node -e \"const {A2AAdapter} = require('./src/a2a'); console.log('A2A Adapter loaded successfully')\"",
-    "debug:check": "node -e \"const {DebugAgent} = require('./src/agents/debug'); console.log('Debug Agent loaded successfully')\"",
+    "a2a:check": "node -e \"const {A2AAdapter} = require('./dist/a2a'); console.log('A2A Adapter loaded successfully')\"",
+    "debug:check": "node -e \"const {DebugAgent} = require('./dist/agents/debug'); console.log('Debug Agent loaded successfully')\"",
     "build": "tsc",
     "test": "jest"
   },
@@ -16,7 +16,11 @@
     "@octokit/rest": "^22.0.1"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^20.0.0",
+    "jest": "^30.2.0",
+    "jest-cli": "^30.2.0",
+    "ts-jest": "^29.4.6",
     "typescript": "^5.0.0"
   }
 }

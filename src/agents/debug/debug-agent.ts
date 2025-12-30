@@ -6,7 +6,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { v4 as uuidv4 } from 'crypto';
+import { randomUUID } from 'crypto';
 import { LogInstrumenter } from './log-instrumenter';
 import { A2ABridge } from './a2a-bridge';
 
@@ -68,7 +68,7 @@ export class DebugAgent {
    * Start debugging session
    */
   async startSession(taskId: string): Promise<DebugSession> {
-    const sessionId = uuidv4();
+    const sessionId = randomUUID();
 
     const session: DebugSession = {
       sessionId,

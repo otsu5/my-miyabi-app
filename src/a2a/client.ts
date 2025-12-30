@@ -40,7 +40,7 @@ export class A2AClient {
         return null;
       }
 
-      const agentCard: A2ATypes.AgentCard = await response.json();
+      const agentCard = (await response.json()) as A2ATypes.AgentCard;
 
       // Validate agent card
       if (!this.validateAgentCard(agentCard)) {
@@ -212,7 +212,8 @@ export class A2AClient {
       const eventSource = new EventSource(`${endpoint.url}/tasks/${taskId}/subscribe`);
 
       eventSource.addEventListener('task-update', (event) => {
-        const update = JSON.parse(event.data) as A2ATypes.TaskUpdate;
+        const messageEvent = event as MessageEvent;
+        const update = JSON.parse(messageEvent.data) as A2ATypes.TaskUpdate;
         onUpdate(update);
       });
 

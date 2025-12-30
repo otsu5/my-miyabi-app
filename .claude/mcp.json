@@ -29,10 +29,9 @@
       "description": "Project-specific context and dependency information"
     },
     "filesystem": {
-      "command": "npx",
+      "command": "node",
       "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
+        "node_modules/@modelcontextprotocol/server-filesystem/dist/index.js",
         "."
       ],
       "disabled": false,
@@ -46,8 +45,8 @@
       "env": {
         "AI_GUIDES_API_URL": "http://localhost:8888"
       },
-      "disabled": false,
-      "description": "Context Engineering - AI-powered context analysis, optimization, and semantic search"
+      "disabled": true,
+      "description": "Context Engineering - AI-powered context analysis, optimization, and semantic search (外部依存 - 現在無効)"
     },
     "miyabi": {
       "command": "node",
