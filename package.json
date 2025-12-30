@@ -1,0 +1,22 @@
+{
+  "name": "my-miyabi-app",
+  "version": "1.0.0",
+  "description": "Miyabiフレームワークで構築された自律型開発プロジェクト",
+  "scripts": {
+    "mcp:check": "node .claude/mcp-servers/check-health.js",
+    "mcp:list": "node -e \"console.log(JSON.stringify(require('./.claude/mcp.json'), null, 2))\"",
+    "a2a:check": "node -e \"const {A2AAdapter} = require('./src/a2a'); console.log('A2A Adapter loaded successfully')\"",
+    "debug:check": "node -e \"const {DebugAgent} = require('./src/agents/debug'); console.log('Debug Agent loaded successfully')\"",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1",
+    "@modelcontextprotocol/server-filesystem": "^2025.12.18",
+    "@octokit/rest": "^22.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
