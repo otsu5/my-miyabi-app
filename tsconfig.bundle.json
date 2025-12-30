@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./.claude/mcp-servers/miyabi-bundle-build",
+    "rootDir": "./src/mcp/miyabi-bundle",
+    "module": "commonjs",
+    "target": "ES2022",
+    "declaration": false,
+    "sourceMap": true
+  },
+  "include": ["src/mcp/miyabi-bundle/**/*.ts"],
+  "exclude": ["src/mcp/miyabi-bundle/**/*.test.ts"]
+}

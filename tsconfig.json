@@ -17,7 +17,8 @@
     "paths": {
       "@a2a/*": ["src/a2a/*"],
       "@agents/*": ["src/agents/*"],
-      "@types/*": ["src/types/*"]
+      "@types/*": ["src/types/*"],
+      "@mcp/*": ["src/mcp/*"]
     }
   },
   "include": ["src/**/*"],

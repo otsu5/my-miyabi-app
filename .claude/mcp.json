@@ -55,6 +55,19 @@
       ],
       "disabled": false,
       "description": "Miyabi CLI統合 - プロジェクト作成、Agent実行、自動化機能"
+    },
+    "miyabi-bundle": {
+      "command": "node",
+      "args": [
+        ".claude/mcp-servers/miyabi-bundle.js"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "REPOSITORY": "${REPOSITORY}"
+      },
+      "disabled": false,
+      "description": "Miyabi MCP Bundle - 172 tools + 38 agents + 22 skills"
     }
   }
 }
